@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/mobileMenu.css">
+	<link rel="stylesheet" href="css/menu.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/produtos.js"></script>
+	<title> Delt </title>
+</head>
+
+<body>
+	<header class="header-index">
+		<h1 class="header-logo">D E L T</h1>
+		<span class="header-icone">
+			<i class="fa fa-shopping-bag" style="font-size: 1.8em;"></i>
+			<span class="carrinho-quantidade">0</span>
+		</span>
+	</header>
+	<main>
+		<nav class="menu">
+			<h1 class="menu-titulo">Blusas</h1>
+			<div class="menu-interativo">
+				<a class="menu-interativo-botao" onclick="abreFiltro()">Filtrar</a>
+				<a class="menu-interativo-botao" onclick="abreOrdenar()">Ordenar</a>
+			</div>
+			<div class="menu-dropdown">
+				<div class="menu-filtrar" id="menuFiltro">
+					<button class="menu-dropdown-titulo" onclick="fechaFiltro()">Filtrar
+						<i class="fa fa-close"></i>
+					</button>
+					<div>
+						<button class="menu-filtrar-expandir" onclick="dropdownCores()">Cores
+							<i class="fa fa-plus" id="icone-cores"></i>
+						</button>
+						<div class="menu-filtrar-items" id="cores">
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="amarelo" name="Amarelo">
+								<label for="amarelo">amarelo</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="azul" name="Azul">
+								<label for="azul">azul</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="branco" name="Branco">
+								<label for="branco">branco</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="cinza" name="Cinza">
+								<label for="cinza">cinza</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="laranja" name="Laranja">
+								<label for="laranja">laranja</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="verde" name="Verde">
+								<label for="verde">verde</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="vermelho" name="Vermelho">
+								<label for="vermelho">vermelho</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="preto" name="Preto">
+								<label for="preto">preto</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="rosa" name="Rosa">
+								<label for="rosa">rosa</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="vinho" name="Vinho">
+								<label for="vinho">vinho</label>
+							</span>
+						</div>
+					</div>
+					<div class="menu-filtrar-tamanho">
+						<button class="menu-filtrar-expandir" onclick="dropdownTamanhos()">Tamanho
+							<i class="fa fa-plus icone-expandir" id="icone-tamanhos"></i>
+						</button>
+						<div class="menu-filtrar-radio" id="tamanhos">
+							<input type="radio" name="tamanho" id="tamanho_1" value="p"/>
+							<label for="tamanho_1">P</label>
+
+							<input type="radio" name="tamanho" id="tamanho_2" value="m"/>
+							<label for="tamanho_2">M</label>
+
+							<input type="radio" name="tamanho" id="tamanho_3" value="g" />
+							<label for="tamanho_3">G</label>
+
+							<input type="radio" name="tamanho" id="tamanho_4" value="gg" />
+							<label for="tamanho_4">GG</label>
+
+							<input type="radio" name="tamanho" id="tamanho_5" value="u" />
+							<label for="tamanho_5">U</label>
+
+							<input type="radio" name="tamanho" id="tamanho_6" value="36"/>
+							<label for="tamanho_6">36</label>
+
+							<input type="radio" name="tamanho" id="tamanho_7" value="38"/>
+							<label for="tamanho_7">38</label>
+
+							<input type="radio" name="tamanho" id="tamanho_8" value="40"/>
+							<label for="tamanho_8">40</label>
+
+							<input type="radio" name="tamanho" id="tamanho_9" value="42"/>
+							<label for="tamanho_9">42</label>
+
+							<input type="radio" name="tamanho" id="tamanho_10" value="44"/>
+							<label for="tamanho_10">44</label>
+
+							<input type="radio" name="tamanho" id="tamanho_11" value="46"/>
+							<label for="tamanho_11">46</label>
+						</div>
+					</div>
+					<div>
+						<button class="menu-filtrar-expandir" onclick="dropdownPrecos()">Faixa de preço
+							<i class="fa fa-plus icone-expandir" id="icone-precos"></i>
+						</button>
+						<div class="menu-filtrar-items" id="precos">
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="faixa_1" name="faixa1">
+								<label for="faixa_1">de R$ 0 até R$ 50</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="faixa_2" name="faixa2">
+								<label for="faixa_2">de R$ 51 até R$ 150</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="faixa_3" name="faixa3">
+								<label for="faixa_3">de R$ 151 até R$ 300</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="faixa_4" name="faixa4">
+								<label for="faixa_4">de R$ 301 até R$ 500</label>
+							</span>
+							<span class="filtrar-checkbox">
+								<input type="checkbox" id="faixa_5" name="faixa5">
+								<label for="faixa_5">a partir de R$ 501</label>
+							</span>
+						</div>
+					</div>
+					<div class="menu-botao">
+						<button class="menu-botao-filtro">Aplicar</button>
+						<button class="menu-botao-filtro" id="botao-limpar">Limpar</button>
+					</div>
+				</div>
+				<div class="menu-ordernar" id="menuOrdenar">
+					<button class="menu-dropdown-titulo" onclick="fechaOrdenar()">Ordenar
+						<i class="fa fa-close"></i>
+					</button>
+					<label class="menu-ordernar-opcoes" id="mobile-mais-recente">Mais recentes</label>
+					<label class="menu-ordernar-opcoes" id="mobile-maior-preco">Maior preço</label>
+					<label class="menu-ordernar-opcoes" id="mobile-menor-preco">Menor preço</label>
+				</div>
+			</div>
+		</nav>
+		<div class="produtos">
+			<div class="produtos-ordenar">
+				<div class="selecionado">Ordenar por:</div>
+				<div class="lista">
+					<div class="item" id="mais-recente">Mais recentes</div>
+					<div class="item" id="maior-preco">Maior preço</div>
+					<div class="item" id="menor-preco">Menor preço</div>
+				</div>
+			</div>
+			<ul class="lista-produtos" id="produtos-json">
+				<!--Produtos-->
+			</ul>
+			<button class="produtos-carregar">Carregar mais</button>
+		</div>
+	</main>
+	<footer>
+		<div class="footer-index">
+			<span class="footer-detalhes">DELT Agência Digital - E-commerce XYZ</span>
+		</div>
+	</footer>
+</body></html>

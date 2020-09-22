@@ -1,0 +1,152 @@
+	html {
+		height: 100%;
+		margin: 0;
+	}
+    body {
+        font-family: sans-serif;
+        overflow-x: hidden;
+		display: flex;
+		min-height: 100%;
+		flex-flow: column wrap;
+		justify-content: space-between;
+    }
+
+    /* Header */
+    
+    .header-index {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: #c7c7c7 solid 1px;
+        padding: 1em 1em 1em 1em;
+    }
+
+    .header-logo {
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        border: 3px black solid;
+        padding: 0 10px 0px 10px;
+        margin: 0;
+    }
+
+    .header-icone {
+        padding-right: 1em;
+    }
+
+	.carrinho-quantidade {
+		background-color: #01fa92;
+		display: inline-block;
+		color: #fff;
+		border-radius: 100%;
+		width: 30px;
+		height: 30px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		line-height: 27px;
+		transform: translate(-25px, 5px) scale(.8);
+	}
+    
+    /* Produtos */
+    
+    .produtos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+	.lista-produtos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		margin-bottom: 0;
+		min-height: 25em;
+	}
+	
+    .produto {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 2em;
+        border: 1px solid black;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .produto-foto {
+        width: 100%;
+        margin: 0;
+    }
+
+    .produto-nome {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 300;
+        margin: .5em 0 0 0;
+    }
+
+    .produto-preco {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 24px;
+        margin: .5em 0 0 0;
+    }
+
+    .produto-parcelamento {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .produto-comprar {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 1em;
+        font-size: 20px;
+        width: 100%;
+        padding: 1em 0;
+        text-align: center;
+    }
+    
+    .produtos-carregar {
+        background-color: #01fa92;
+        width: 50%;
+		min-width: 200px;
+		height: 4em;
+        padding: 1em;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+		margin-right: auto;
+		margin-left: auto;
+		align-self: flex-end;
+    }
+	
+	.produtos-carregar:focus {
+		outline-color: #000;
+	}
+
+	.produtos-carregar:disabled {
+		background-color: #d9d9d9;
+	}
+	
+	.produtos-ordenar {
+		display: none;
+	}
+    
+    /* Footer */
+    
+    .footer-index {
+        background-color: #000;
+        margin-top: 5em;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 12px;
+        padding: .5em 0;
+    }
